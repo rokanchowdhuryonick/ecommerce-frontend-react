@@ -15,7 +15,7 @@ function Mobile({mobilesList}) {
                         <div className='card m-2'>
                         <div className='card-body'>
                             <div className='d-flex justify-content-center'>
-                            <img style={{width:'155px', height:'155px'}} src={mobile.photo_path} />
+                            <img style={{width:'155px', height:'155px'}} alt={'Demo Img by Rokan'} src={mobile.photo_path} />
                             </div>
                             <div className='p-1' style={{backgroundColor:'#7fffd4'}}>
                                 <h5>{mobile.mobile_name}</h5>

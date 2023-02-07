@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "72bf7210-9284-490e-a9fe-e867be71a436",
+		"name": "AppleGadgets Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14817814"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "hello@rokanbd.cf",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://backend.ecommerce.rokanchowdhuryonick.com/api/login",
+					"protocol": "https",
+					"host": [
+						"backend",
+						"ecommerce",
+						"rokanchowdhuryonick",
+						"com"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Employee List",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvYmFja2VuZC5lY29tbWVyY2Uucm9rYW5jaG93ZGh1cnlvbmljay5jb21cL2FwaVwvbG9naW4iLCJpYXQiOjE2NzU3NTgwNTcsImV4cCI6MTY3NTc2MTY1NywibmJmIjoxNjc1NzU4MDU3LCJqdGkiOiJYc29OSkNrcGxxcE00dzVFIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.OKJilq29_ftGh1XpWljcvkIcEWkIRTo6ZF1Ngghr_00",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://backend.ecommerce.rokanchowdhuryonick.com/api/employees",
+					"protocol": "https",
+					"host": [
+						"backend",
+						"ecommerce",
+						"rokanchowdhuryonick",
+						"com"
+					],
+					"path": [
+						"api",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mobiles with Filter Param",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://backend.ecommerce.rokanchowdhuryonick.com/api/mobiles",
+					"protocol": "https",
+					"host": [
+						"backend",
+						"ecommerce",
+						"rokanchowdhuryonick",
+						"com"
+					],
+					"path": [
+						"api",
+						"mobiles"
+					],
+					"query": [
+						{
+							"key": "filterID",
+							"value": "6",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

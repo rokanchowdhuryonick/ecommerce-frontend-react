@@ -1,8 +1,8 @@
-import logo from './logo.svg';
 import './App.css';
 import { useEffect, useState } from 'react';
 import Mobile from './Mobile';
 import Filters from './Filters';
+const DOMAIN = "https://backend.ecommerce.rokanchowdhuryonick.com"; 
 
 function App() {
   const [mobilesList, setMobilesList] = useState(null)
@@ -27,7 +27,7 @@ function App() {
 
   const loadFilters = async ()=>{
     setFilterLoading(true);
-    const response =  await fetch('http://127.0.0.1:8000/api/filters');
+    const response =  await fetch(`${DOMAIN}/api/filters`);
     const datas = await response.json();
     setFiltersList(datas.data);
     // console.log(datas);
@@ -36,7 +36,7 @@ function App() {
 
   const loadData = async () =>{
     setLoading(true);
-    let URL = 'http://127.0.0.1:8000/api/mobiles';
+    let URL = `${DOMAIN}/api/mobiles`;
     if (filterIDs.length!==0) {
       URL+="?filterID="+filterIDs.join();
     }
